@@ -1,0 +1,8 @@
+
+
+.categoryWrapper>h1{
+    font-weight: 500;
+    color: var(--main-color);
+    text-align: center;
+    margin: auto;
+}

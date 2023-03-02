@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f8fc;
+  
+}
+
+:root {
+  --main-color: #1292ee;
+  --text-color1: #353535;
+  --text-color2: #515151;
+  --text-color3: #474747;
+  --card-padding: 0.5rem;
+  --heading: 5rem;
+  --lite-color: #6f6f6f;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1814px) {
+  .container {
+    padding: 0% 15%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1385px) {
+  .container {
+    padding: 0% 10%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1146px) {
+  .container {
+    padding: 0% 3.5%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+/* =================================nav=============================== */
+    .menu a:nth-child(9){
+        display: none;
+    }
+
+    .menuInList > a:nth-child(9){
+        display: block;
+    }
+
+    
+
+    .navBottom > .more-menu> i{
+        display: block;
+    }
+
+    /* =================================Recent Post=============================== */
+    
+    .p-p> .p-p-h > span{
+        font-size: 0.8rem;
+    }
+    .p-p> .p-p-h> h1{
+        color: var(--text-color1);
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+    .p-p>p{
+        color: var(--lite-color);
+        line-height: 30px;
+        font-size: 0.9rem;
+    }
+
+    .s-p>span{
+        color: var(--lite-color);
+        font-size: 0.7rem;
+        margin-top: 2rem;
+    }
+    
+    .s-p>h1{
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-color1) ;
+    }
+
+    .t-p>span{
+        color: var(--lite-color);
+        font-size: 0.7rem;
+        margin-top: 2rem;
+    }
+    
+    .t-p>h1{
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-color1) ;
+    }
+  }
+
+  @media screen and (max-width: 938px) {
+    .menu a:nth-child(8){
+        display: none;
+    }
+    .menuInList > a:nth-child(8){
+        display: block;
+    }
+  }
+
+  @media screen and (max-width: 865px) {
+    .menu a:nth-child(7){
+        display: none;
+    }
+
+    .menuInList > a:nth-child(7){
+        display: block;
+    }
+    /* =================================Recent Post=============================== */
+
+    .primary-post{
+        grid-area: 1/1/2/13;
+        
+     }
+     .s-p{
+        grid-area: 2/1/3/7;
+     }
+     .t-p{
+        grid-area: 2/7/3/13;
+     }
+
+     /* ================================populer Post ========================= */
+
+     .vertical-post > .info> h1{
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .popular-post-wrapper{
+        grid-template-columns: 1.5fr 0.3fr;
+    }
+    
+
+    
+    
+  }
+
+  @media screen and (max-width: 755px) {
+    .menu a:nth-child(6){
+        display: none;
+    }
+    .menuInList > a:nth-child(6){
+        display: block;
+    }
+    /* ================populer post=================== */
+    .popular-post-wrapper{
+        grid-template-columns: 1.5fr 0fr;
+    }
+
+    /* ========================home slider========================= */
+    .home-slider > h1{
+        font-size: 2.7rem;
+        font-weight: 600;
+        color: var(--text-color1);
+        margin-bottom: -1rem;
+    }
+    .home-slider > p{
+        color: var(--text-color3);
+        font-size: 1rem;
+        line-height: 25pt;
+    }
+
+    /* =======================category========================= */
+    .verticalPost > .postInfo > span{
+        color: var(--lite-color);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        
+    }
+    
+    .verticalPost > .postInfo > h1{
+        color: var(--text-color1);
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .v-p-g{
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+    
+  }
+
+  @media screen and (max-width: 630px) {
+    
+    /* =============== populer post========================= */
+
+    .vertical-post{
+        gap: 1rem;
+        flex-direction: column;
+        border-bottom: 0;
+    }
+
+    .vertical-post > .info> h1{
+        font-size: 0.9rem;
+    }
+
+    .post{
+        display: grid;
+        /* grid-auto-flow: column; */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        
+    }
+
+    .vertical-post > .thumbnail{
+        width: 100%;
+    }
+    .vertical-post > .info{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .vertical-post > .info>h1{
+        font-size: 1.1rem;
+    }
+    /* ===========================nav ============================== */
+    .menu a:nth-child(5){
+        display: none;
+    }
+
+    .menuInList > a:nth-child(5){
+        display: block;
+    }
+
+    .navTop > .search {
+        display: none;
+    }
+
+    .navTop > .search > i{
+        font-size: 1.3rem;
+        color: var(--lite-color);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: .6rem;
+        border-radius: 50%;
+        background-color: #eaeaea;
+        transition: all 0.3 ease;
+    }
+
+    .navTop > .search > i:hover{
+        background-color: #dcdbdb;
+        cursor: pointer;
+    }
+
+    /* ========================home slider========================= */
+    .home-slider > h1{
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: var(--text-color1);
+        margin-bottom: -1rem;
+    }
+
+    .home-slider{
+        width: 100%;
+    }
+
+    .heading h1{
+        color: var(--text-color3);
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .heading p{
+        color: var(--main-color);
+        font-size: 0.8rem;
+    }
+    
+    
+  }
+
+  @media screen and (max-width: 630px) {
+    .post{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .popular-post{
+        height: 40rem;
+    }
+  }
+
+
+  @media screen and (max-width: 500px) {
+
+
+    .home-slider > .search>input{
+        padding: 0.6rem 1.5rem;
+       
+    }
+    
+    .home-slider > .search > .search-input input{
+        padding: 0.6rem 8rem 0.6rem 3rem;
+        width: 100%;
+        border-radius: 0.3rem;
+        outline: 0;
+        border: none;
+        background-color: #edeff1;
+        font-size: 1.1rem;
+    }
+    
+    .p-p> .p-p-h> h1{
+        color: var(--text-color1);
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    .menu a{
+        
+        font-size: 0.8rem;
+    }
+
+    .logo h2{
+        font-size: 1.2rem;
+        
+    }
+
+    .login>a{
+        font-size: 0.8rem;
+        
+        padding: 0.3rem 2rem;
+        
+    }
+    
+    .heading h1{
+        color: var(--text-color3);
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    .heading p{
+        color: var(--main-color);
+        font-size: 0.8rem;
+    }
+
+    .verticalPost > .postInfo > h1{
+        color: var(--text-color1);
+        font-size: 1rem!important;
+        font-weight: 500;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    /* .cotact{
+        display: none;
+    }
+
+    .footerWrapper{
+        grid-template-columns: repeat(2, 1fr);
+        
+    } */
+  }

@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: -1rem;
+    margin-top: 2rem;
+}
+
+.header .header-icon{
+    height: 3rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: red;
+    overflow: hidden;
+}
+
+.header > h1{
+    font-weight: 500;
+    color: var(--text-color3);
+    font-size: 1.6rem;
+}
+
+.mainPostWrapper{
+    margin-bottom: 6rem!important;
+}

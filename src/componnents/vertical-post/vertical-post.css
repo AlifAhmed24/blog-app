@@ -1,0 +1,33 @@
+.verticalPost{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.imgWrapper{
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.imgWrapper>img{
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.verticalPost > .postInfo > span{
+    color: var(--lite-color);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    
+}
+
+.verticalPost > .postInfo > h1{
+    color: var(--text-color1);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.verticalPost:hover .imgWrapper>img{
+    transform: scale(1.1);
+}

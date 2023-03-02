@@ -1,0 +1,9 @@
+.category-wrapper{
+    margin: 5rem 0rem;
+}
+
+.v-p-g{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}

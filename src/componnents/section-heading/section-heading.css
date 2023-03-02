@@ -1,0 +1,15 @@
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 2rem;
+}
+ .heading h1{
+    color: var(--text-color3);
+    font-weight: 500;
+}
+.heading p{
+    color: var(--main-color)
+}

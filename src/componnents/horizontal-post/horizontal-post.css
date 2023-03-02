@@ -1,0 +1,80 @@
+.horizontalPost {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    
+}
+
+.horizontalPost:hover .thumbnail img{
+    transform: scale(1.05);
+    
+}
+
+.horizontalPost > .thumbnail{
+    width: 30%;
+    border-radius: .3rem;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    
+}
+
+.horizontalPost > .thumbnail img{
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.horizontalPost > .info{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.horizontalPost > .info > h1{
+    font-weight: 500;
+    color: var(--text-color1);
+    font-size: 1.8rem;
+}
+
+.horizontalPost > .info > p{
+    font-weight: 400;
+    color: #777777;
+    line-height: 1.6rem;
+}
+
+.horizontalPost > .info > span{
+    color: #757575;
+    font-size: 0.8rem;
+    margin-bottom: -0.6rem;
+}
+
+.writer{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: -.8rem;
+}
+
+.writer > .writterAvatar{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 1.2rem;
+    aspect-ratio: 1/1;
+    /* background-color: red; */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px -5px;
+    margin-right: -.2rem;
+}
+
+.writer span{
+    color: var(--text-color3);
+    font-size: .7rem;
+}
+
+.writer span:last-child{
+    font-weight: bold;
+}

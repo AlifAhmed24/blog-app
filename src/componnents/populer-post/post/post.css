@@ -1,0 +1,33 @@
+.vertical-post{
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 1rem; 
+}
+
+.vertical-post:last-child{
+    border-bottom: 0;
+}
+
+.vertical-post > .thumbnail{
+    background-color: rgb(226, 226, 226);
+    width: 30%;
+    aspect-ratio: 16/9;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.vertical-post > .thumbnail > img{
+    height: 100%;
+    object-fit: cover;
+}
+.vertical-post > .info{
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+.vertical-post > .info> h1{
+    color: var(--text-color2);
+    font-weight: 500;
+    font-size: 1.4rem;
+    width: 100%;
+}
