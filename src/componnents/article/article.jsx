@@ -1,47 +1,96 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
 import "./article.css";
+import VerticalPost from "./../vertical-post/vertical-post";
+import Loading from "../loading/loading";
+import SectionHeading from "../section-heading/section-heading";
 
 function Article() {
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
 
-    const location = useLocation();
+  const [article, setArticle] = useState("");
+  
+  const [topViewsC, setTopViewsC] = useState("");
+  const [loading, setLoading] = useState(true);
 
-    console.log(location.pathname.split('/')[2])
-    
-    
+  useEffect(() => {
+    setLoading(true);
+    const fetchData = async () => {
+      try {
+        const article = await axios.get(
+          "http://localhost:8800/api/article/get/id/" + path
+        );
+        setArticle(article.data);
+        
+
+        const topViews = await axios.get(
+          "http://localhost:8800/api/article/get/category/"+ article.data.category +"/views"
+
+        );
+        setTopViewsC(topViews.data);
+
+        const views = await axios.put(
+          "http://localhost:8800/api/article/"+ path +"/view"
+
+        );
+        setLoading(false);
+      } catch (error) {
+        console.log(error)
+      }
+    };
+
+    fetchData();
+  }, [path]);
+
   return (
-    <div className="container">
+    <div className="article-container">
       <div className="articleWrapper">
         <div className="article-header">
           <div className="article-writer">
             <div className="avatar">
-                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt='' />
+              <img
+                src="https://img.freepik.com/free-vector/young-man-multitasking-concept_52683-31753.jpg?w=1380&t=st=1679225761~exp=1679226361~hmac=c07d617991df1f3f1eb921038fdc808193dfb1f9199fac469359a3215cb46f66"
+                alt=""
+              />
             </div>
-            <span>Written by <b>Alex </b></span>
+            <span>
+              Written by <b>{article.writer}</b> at{" "}
+              {new Date(article.createdAt).toLocaleDateString()}
+            </span>
           </div>
-          <h1>
-            Beyond Tickets: How Customer Support Teams Impact Revenue (Featuring
-            Litmus)
-          </h1>
+          <h1>{article.title}</h1>
         </div>
         <div className="article-thumbnail">
-          <img
-            src="https://thumbs.dreamstime.com/b/technology-screen-man-city-background-blurred-178329479.jpg"
-            alt=""
-          />
+          <img src={article.thumbnail} alt="" />
         </div>
         <div className="article-paragraph">
-          <p>
-            A possible US ban on TikTok took a step forward after a US House
-            committee advanced a bill that would empower the president to
-            prohibit the popular social media app along with other apps owned by
-            companies based in China. The bill known as the Deterring America’s
-            Technological Adversaries (DATA) Act would give the president
-            authority to ban foreign apps controlled or influenced by China and
-            to sanction companies or individuals with ties to such apps. …
-          </p>
+          <div
+            class="p"
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          ></div>
         </div>
-        <div className="related-article"></div>
+        <div className="related-article">
+          {loading ? (
+            <Loading heading="Latest Post" />
+          ) : (
+            <div class="category-wrapper">
+              <SectionHeading heading="Related Post" />
+              <div className="v-p-g">
+                {topViewsC.map((topViewsC, index) => (
+                  <VerticalPost
+                    key={topViewsC._id}
+                    id={topViewsC._id}
+                    thumbnail={topViewsC.thumbnail}
+                    category={topViewsC.category}
+                    title={topViewsC.title}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

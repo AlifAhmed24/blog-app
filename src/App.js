@@ -17,6 +17,10 @@ import Sports from './componnents/sports/sport.jsx'
 import Education from "./componnents/education/education.jsx";
 import Article from './componnents/article/article.jsx';
 import Footer from './componnents/footer/footer.jsx';
+import Write from './componnents/write/write.jsx';
+import Register from './componnents/register/register.jsx';
+import Login from './componnents/login/login.jsx';
+import AdminDashboard from "./page/adminDashboard.jsx";
 import './css/style.css'
 
 function Layout(){
@@ -76,7 +80,51 @@ const router = Router([
         },
     ]
     },
-    
+    {
+        path: "/cpanel:201",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/update/:id",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/write",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/article/Life Style",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/article/Health",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/article/Fashion",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/article/Food and Cooking",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/article/Technology",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/article/Business",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/article/Sports",
+        element: <AdminDashboard />
+    },
+    {
+        path: "/cpanel:201/article/Education",
+        element: <AdminDashboard />
+    },
+   
 ])
 
 function App(){

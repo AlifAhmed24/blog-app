@@ -1,0 +1,150 @@
+.sideBar{
+    background-color: #222222;
+    width: 18rem;
+    height: 100vh;
+    font-weight: 300;
+    overflow: scroll;
+}
+
+.sideBar > h1{
+    color: var(--main-color);
+    font-size: 1rem;
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    background-color: #333333;
+    width: 100%;
+    user-select: none;
+}
+
+.menu-list{
+    padding: 1rem 1rem;
+    
+}
+
+
+.menu-list > ul > li:first-child{
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.menu-list > ul > li  {
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    list-style-type: none;
+    padding: 0.8rem 1rem;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
+    user-select: none;
+}
+
+.menu-list > ul > li > a{
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    list-style-type: none;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
+    user-select: none;
+    width: 100%;
+}
+
+
+
+.menu-list > ul > li:hover{
+    background-color: #333333;
+}
+
+.menu-list > ul > li > i{
+    font-size: 1.1rem;
+}
+
+.sideBarList{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sideBar{
+    animation-name: fromleft;
+    animation-duration: 0.3s;
+}
+@keyframes fromleft {
+    0%{margin-left: -15rem;}
+    100%{margin-left: 0rem;}
+}
+
+
+.sideBarList > a{
+    color: white;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding: 0.5rem 4rem;
+    border-radius: 0.3rem;
+    transition: all 0.05s ease-in-out;
+    animation-name: fromTop;
+    animation-duration: 0.3s;
+    user-select: none;
+}
+
+@keyframes fromTop {
+    0%{margin-top: -5rem}
+    100%{margin-top:0}
+}
+
+.sideBarList > a:hover{
+    background-color: #333333;
+}
+
+.home > a > span:first-child{
+    font-size: 1.1rem;
+}
+
+.menu-icon {
+    position: absolute;
+    z-index: 5;
+    top: 0.7rem;
+    padding: 0rem 1rem;
+}
+
+.menu-icon > i{
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;   
+}
+
+
+.menu-icon > .bx-menu{
+    left: 1rem;
+    transition: all .3s ease;
+}
+
+.menu-icon > .bx-menu:hover{
+    transform: scale(0.9);
+    
+}
+
+.menu-icon > .bx-x{
+    left: 14rem;
+    color: white!important;
+    animation-name: fromleft;
+    animation-duration: 0.3s;
+    transition: all .3s ease;
+}
+
+.menu-icon > .bx-x:hover{
+    transform: scale(0.9);
+    
+}
+
+
+@keyframes fromleft {
+    0%{margin-left: -15rem;}
+    100%{margin-left: 0rem;}
+}

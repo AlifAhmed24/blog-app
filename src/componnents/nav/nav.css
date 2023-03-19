@@ -1,7 +1,7 @@
 nav{
     background-color: white;
     border-bottom: 1px solid #ebebeb;
-    
+    width: 100%;
 }
 
 .navTop{
@@ -54,15 +54,7 @@ nav{
 
 /* menu */
 
-.navBottom{
-    margin: auto;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem  0%;
-    
-}
+
 
 .menu{
     display: flex;
@@ -89,7 +81,7 @@ nav{
 }
 
 
-.navBottom > .more-menu> i{
+.menuWrapper > .menu> i{
     font-size: 1.3rem;
     color: var(--lite-color);
     cursor: pointer;
@@ -98,18 +90,19 @@ nav{
     border-radius: 50%;
     transition: all .2s ease;
     display: none;
+    
 }
 
 
-.navBottom > .more-menu> i:hover{
+.menuWrapper > .menu> i:hover{
     background-color: #eaeaea;
 }
 
-.navBottom > .more-menu{
+.menuWrapper > .more-menu{
     position: relative;
 }
 
-.more-menu >.menuInList{
+.menuWrapper > .more-menu >.menuInList{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -120,7 +113,7 @@ nav{
     box-shadow: 0px 0px 10px -8px;
     border-radius: 0.3rem;
     overflow: hidden;
-    display: none;
+    display: block;
 }
 .menuInList > a{
     color: var(--lite-color);
@@ -132,22 +125,36 @@ nav{
 
 .menuInList > a:hover{
     background-color: #edeff1;
+    
+    
 }
 
-/*Login*/
-.login>a{
-    font-size: 1.1rem;
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-    padding: 0.5rem 2.3rem;
+/*write*/
+
+.write{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    background-color: #464545;
+    padding: 0.5rem 1.5rem;
     border-radius: 0.3rem;
     font-weight: 500;
+    color: #fff;
     transition: all 0.3s ease;
-    background-color: var(--main-color);
-    color: #ffffff
 }
-.login>a:hover{
-    background-color: #117dcb;
+.write>span{
+    font-size: 1.1rem;
+    color: var(--main-color);
     
+    color: #ffffff;
+   
+}
+.write:hover{
+    background-color: #2d2c2c;
+    cursor: pointer;
+}
+
+.write>i{
+    font-size: 1.3rem;
 }
 

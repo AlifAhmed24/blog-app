@@ -36,47 +36,17 @@ function HomeNav() {
     });
   }, []);
 
-
-
   return (
     <nav>
       <div className="navTop">
         <div className="logo">
           <h2>
-            Topic<span>Trove</span>
+            Trending<span>Wavez</span>
           </h2>
         </div>
-        <div className="search">
-          <input
-            id="searchBar"
-            type="text"
-            placeholder="Search for a topic..."
-          />
-          <i id="top-search" class="bx bx-search-alt-2"></i>
-        </div>
-        <div className="login">
-          <a href="#">login</a>
-        </div>
-      </div>
-      <div className="navBottom">
-        <div className="menu">
-          <Link to="/">Home</Link>
-          <Link to="/lifestyle">Life Style</Link>
-          <Link to="/health">Health</Link>
-          <Link to="/fashion">Fashion</Link>
-          <Link to="/foodandcooking">Food and Cooking</Link>
-          <Link to="/technology">Technology</Link>
-          <Link to="/business">Business</Link>
-          <Link to="/sports">Sports</Link>
-          <Link to="/education">Education</Link>
-        </div>
-        <div className="more-menu">
-          <i
-            onClick={clickHandle}
-            id="moreList"
-            class="bx bx-dots-vertical-rounded"
-          ></i>
-          <div className="menuInList">
+
+        <div className="menuWrapper">
+          <div className="menu">
             <Link to="/">Home</Link>
             <Link to="/lifestyle">Life Style</Link>
             <Link to="/health">Health</Link>
@@ -86,8 +56,30 @@ function HomeNav() {
             <Link to="/business">Business</Link>
             <Link to="/sports">Sports</Link>
             <Link to="/education">Education</Link>
+            <i
+              onClick={clickHandle}
+              id="moreList"
+              class="bx bx-dots-vertical-rounded"
+            ></i>
+          </div>
+          <div className="more-menu">
+            <div className="menuInList">
+              <Link to="/">Home</Link>
+              <Link to="/lifestyle">Life Style</Link>
+              <Link to="/health">Health</Link>
+              <Link to="/fashion">Fashion</Link>
+              <Link to="/foodandcooking">Food and Cooking</Link>
+              <Link to="/technology">Technology</Link>
+              <Link to="/business">Business</Link>
+              <Link to="/sports">Sports</Link>
+              <Link to="/education">Education</Link>
+            </div>
           </div>
         </div>
+        <a href="/cpanel:201" className="write">
+        <i class='bx bxs-edit'></i>
+        <span>Write</span>
+        </a>
       </div>
     </nav>
   );

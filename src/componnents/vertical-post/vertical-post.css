@@ -8,10 +8,14 @@
     aspect-ratio: 16/9;
     overflow: hidden;
     border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eef0f3;
 }
 .imgWrapper>img{
     height: 100%;
-    object-fit: cover;
+    width: auto;
     transition: all 0.3s ease;
 }
 
@@ -19,11 +23,11 @@
     color: var(--lite-color);
     font-size: 0.8rem;
     text-transform: uppercase;
-    
+    font-weight: 500;
 }
 
 .verticalPost > .postInfo > h1{
-    color: var(--text-color1);
+    color: var(--text-color3);
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -31,3 +35,15 @@
 .verticalPost:hover .imgWrapper>img{
     transform: scale(1.1);
 }
+.postInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.postInfo > span{
+    text-transform:uppercase;
+}
+
+
+/* loading */
